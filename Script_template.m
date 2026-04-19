@@ -40,10 +40,44 @@ grid on;
 saveas(gcf, 'capsule_temperature_plot.png');
 
 % d)
+data_date = input('Enter the date when data was recorded (dd/mm/yyyy): ', 's');      
+location = input('Enter the actual location: ', 's');                 
+fprintf('Data logging initiated - %s\n', data_date);
+fprintf('Location - %s\n', location);
+
+minute_indices = 1:60:length(temps);          
+minute_temps   = temps(minute_indices);
+
+for m = 0:10
+    fprintf('Minute\t%d\n', m);
+    fprintf('Temperature\t%.2f C\n', minute_temps(m+1));                           
+end
+
+fprintf('Max temp\t%.2f C\n', max_temp);
+fprintf('Min temp\t%.2f C\n', min_temp);
+fprintf('Average temp\t%.2f C\n', avg_temp);
+disp('Data logging terminated');
+
+% e) 
+filename = 'capsule_temperature.txt';
+fid = fopen(filename, 'w');
+fprintf(fid, 'Data logging initiated - %s\n', data_date);
+fprintf(fid, 'Location - %s\n\n', location);
+for m = 0:length(minute_temps)-1
+    fprintf(fid, 'Minute\t%d\n', m);
+    fprintf(fid, 'Temperature\t%.2f C\n\n', minute_temps(m+1));
+end
+fprintf(fid, 'Max temp\t%.2f C\n', max_temp);
+fprintf(fid, 'Min temp\t%.2f C\n', min_temp);
+fprintf(fid, 'Average temp\t%.2f C\n', avg_temp);
+fprintf(fid, 'Data logging terminated\n');
+fclose(fid);
+fid_check = fopen(filename, 'r');
+fclose(fid_check);
+disp('done');
 
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
 
-% Insert answers here
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
