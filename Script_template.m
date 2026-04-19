@@ -77,17 +77,11 @@ fclose(fid_check);
 disp('done');
 
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
-% g)
-green_Pin = 'D10';     
-yellow_Pin  = 'D9';    
-red_Pin    = 'D8';     
-VOC = 0.5;           
-TC  = 0.01; 
+% temp_monitor
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
-
-% Insert answers here
+% temp_prediction
 
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
