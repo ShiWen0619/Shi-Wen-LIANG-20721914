@@ -1,21 +1,18 @@
+clear;
+a = arduino('COM7', 'Uno');
 %% TASK 3 – ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
-
-% b) c) d) Temperature change rate calculation and LED control
-
 VOC = 0.5;
 TC  = 0.01;
-
-% LED pins (same as Task 2)
 greenPin  = 'D10';
 yellowPin = 'D9';
 redPin    = 'D8';
 
-% Initialization
 t_start = tic;
 last_read = 0;
 prev_temp = 0;
 rate = 0;                    % temperature change rate in °C/s
 
+% b)
 while true
     t_now = toc(t_start);
     
@@ -23,17 +20,13 @@ while true
     if t_now - last_read >= 1
         Vout = readVoltage(a, 'A0');
         current_temp = (Vout - VOC) / TC;
-        
-        % b) Calculate rate of temperature change (°C/s)
         if prev_temp ~= 0
-            rate = current_temp - prev_temp;     % simple difference
+            rate = current_temp - prev_temp;
         end
         prev_temp = current_temp;
         
-        % c) Predict temperature in 5 minutes (300 seconds)
+        % c)
         predicted_temp = current_temp + rate * 300;
-        
-        % Display (minimal output as required)
         disp(['Current: ' num2str(current_temp,'%.2f') ' C | ' ...
               'Rate: ' num2str(rate*60,'%.2f') ' C/min | ' ...
               'Predicted (5min): ' num2str(predicted_temp,'%.2f') ' C']);
@@ -41,7 +34,7 @@ while true
         last_read = t_now;
     end
     
-    % d) Control LEDs based on rate of change (constant light)
+    % d)
     rate_per_min = rate * 60;   % convert to °C/min
     
     if rate_per_min > 4
