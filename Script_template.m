@@ -1,10 +1,8 @@
 % Insert name here
 % Insert email address here
-
-
-%% PRELIMINARY TASK - ARDUINO AND GIT INSTALLATION [5 MARKS]
 clear;
-a = arduino('COM5', 'Uno'); 
+a = arduino('COM7', 'Uno'); 
+%% PRELIMINARY TASK - ARDUINO AND GIT INSTALLATION [5 MARKS]
 for i = 1:10
     writeDigitalPin(a, 'D4', 1); 
     pause(0.5);                   
@@ -77,12 +75,12 @@ fclose(fid_check);
 disp('done');
 
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
-% temp_monitor
+% temp_monitor(a)
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
 % temp_prediction
-temp_prediction(a);
+
 
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]

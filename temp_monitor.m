@@ -1,5 +1,5 @@
 clear;
-a = arduino('COM5', 'Uno'); 
+a = arduino('COM7', 'Uno'); 
 
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
 % h) 
