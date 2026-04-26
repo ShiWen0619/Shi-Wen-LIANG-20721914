@@ -82,6 +82,7 @@ disp('done');
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
 % temp_prediction
+temp_prediction(a);
 
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
