@@ -75,7 +75,7 @@ fclose(fid_check);
 disp('done');
 
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
-% temp_monitor(a)
+% temp_monitor
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
