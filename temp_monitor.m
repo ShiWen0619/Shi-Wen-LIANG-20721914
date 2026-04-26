@@ -94,3 +94,6 @@ while true
     
     pause(0.05);   % Small delay to reduce CPU usage
 end
+
+% i)
+fprintf('This function provides a real-time temperature monitoring interface for the spacecraft crew capsule. It continuously acquires data from the thermistor via the Arduino object, converting voltage to Celsius to update a live graphical plot with appropriate axes and scaling. The function implements a safety logic: it maintains a constant green LED when the temperature is within the 18-24 C comfort range. If the temperature drops below 18 C, a yellow LED blinks every 0.5 s, and if it exceeds 24 C, a red LED blinks every 0.25 s.\n');

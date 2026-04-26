@@ -1,5 +1,5 @@
-% Insert name here
-% Insert email address here
+% Shi Wen LIANG
+% sqysl2@nottingham.edu.cn
 clear;
 a = arduino('COM7', 'Uno'); 
 %% PRELIMINARY TASK - ARDUINO AND GIT INSTALLATION [5 MARKS]

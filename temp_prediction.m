@@ -1,6 +1,8 @@
 clear;
 a = arduino('COM7', 'Uno');
+
 %% TASK 3 – ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
+
 VOC = 0.5;
 TC  = 0.01;
 greenPin  = 'D10';
@@ -56,3 +58,6 @@ while true
     
     pause(0.05);
 end
+
+% e)
+fprintf('The temp_prediction function extends safety monitoring by analyzing the rate of temperature change (degC/s). By calculating the derivative of the collected data, it filters noise to predict the capsule temperature five minutes into the future. Beyond threshold monitoring, it provides early warnings based on volatility: a constant red light activates if the temperature rises faster than +4 degC/min, and a constant yellow light activates for decreases exceeding -4 degC/min. This allows the crew to proactively adjust cabin controls before comfort limits are breached.\n');
