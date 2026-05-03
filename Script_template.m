@@ -4,9 +4,9 @@ clear;
 a = arduino('COM7', 'Uno'); 
 %% PRELIMINARY TASK - ARDUINO AND GIT INSTALLATION [5 MARKS]
 for i = 1:10
-    writeDigitalPin(a, 'D4', 1); 
+    writeDigitalPin(a, 'D10', 1); 
     pause(0.5);                   
-    writeDigitalPin(a, 'D4', 0);                  
+    writeDigitalPin(a, 'D10', 0);                  
 end
 
 %% TASK 1 - READ TEMPERATURE DATA, PLOT, AND WRITE TO A LOG FILE [20 MARKS]
@@ -75,11 +75,11 @@ fclose(fid_check);
 disp('done');
 
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
-% temp_monitor
+temp_monitor(a);
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
-% temp_prediction
+temp_prediction(a);
 
 
 

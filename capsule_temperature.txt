@@ -1,40 +1,40 @@
-Data logging initiated - 04/20/2026
+Data logging initiated - 05/05/2026
 Location - nottingham
 
 Minute	0
-Temperature	16.47 C
+Temperature	23.31 C
 
 Minute	1
-Temperature	16.96 C
+Temperature	23.80 C
 
 Minute	2
-Temperature	17.45 C
+Temperature	23.80 C
 
 Minute	3
-Temperature	17.94 C
+Temperature	23.31 C
 
 Minute	4
-Temperature	18.43 C
+Temperature	23.80 C
 
 Minute	5
-Temperature	18.43 C
+Temperature	23.80 C
 
 Minute	6
-Temperature	18.91 C
+Temperature	23.80 C
 
 Minute	7
-Temperature	18.91 C
+Temperature	23.80 C
 
 Minute	8
-Temperature	18.91 C
+Temperature	23.31 C
 
 Minute	9
-Temperature	18.91 C
+Temperature	23.31 C
 
 Minute	10
-Temperature	18.91 C
+Temperature	23.31 C
 
-Max temp	18.91 C
-Min temp	15.98 C
-Average temp	18.19 C
+Max temp	24.29 C
+Min temp	23.31 C
+Average temp	23.76 C
 Data logging terminated

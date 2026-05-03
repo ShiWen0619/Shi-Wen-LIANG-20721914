@@ -1,6 +1,4 @@
-clear;
-a = arduino('COM7', 'Uno');
-
+function temp_prediction(a)
 %% TASK 3 – ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
 
 VOC = 0.5;

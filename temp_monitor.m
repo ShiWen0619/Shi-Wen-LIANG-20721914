@@ -1,6 +1,4 @@
-clear;
-a = arduino('COM7', 'Uno');
-
+function temp_monitor(a)
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
 
 % h)
@@ -27,7 +25,7 @@ t_start = tic;         % Start timer
 last_read = 0;
 
 % Read initial temperature
-Vout = readVoltage(a, 'A0');
+Vout = readVoltage(a, 'A0');05
 current_temp = (Vout - VOC) / TC;
 
 % Variables for blinking LEDs
